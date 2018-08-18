@@ -1,0 +1,64 @@
+<style lang="scss">
+@import './styles/common.scss';
+</style>
+
+<script>
+import wepy from 'wepy'
+import 'wepy-async-function'
+// import Promise from 'promise-polyfill'// 使用promise之前要import
+
+// 绑定 layer 对象到 wepy.page wepy.component 类
+import layer from './service/layer.js'
+wepy.page.prototype.$layer = layer
+wepy.component.prototype.$layer = layer
+
+export default class extends wepy.app {
+  config = {
+    pages: [
+      'pages/index',
+      'pages/my'
+    ],
+    window: {
+      backgroundTextStyle: 'light',
+      navigationBarBackgroundColor: '#fff',
+      navigationBarTitleText: '测试小程序',
+      backgroundColor: '#EBEBEB',
+      navigationBarTextStyle: 'black',
+      onReachBottomDistance: '75'
+    },
+    tabBar: {
+      color: '#BABABA',
+      selectedColor: '#FF6300',
+      backgroundColor: '#FFFFFF',
+      list: [
+        {
+          pagePath: 'pages/index',
+          text: '首页'
+        },
+        {
+          pagePath: 'pages/my',
+          text: '我的'
+        }
+      ]
+    }
+  }
+
+  globalData = {
+    scene: '',
+    code: ''
+  }
+
+  constructor() {
+    super()
+    this.use('requestfix')
+    this.use('promisify')
+  }
+
+  onLaunch() {}
+
+  async onShow(options) {
+    console.log('app onshow options>>>', options)
+    this.globalData.scene = options.scene + ''
+  }
+}
+</script>

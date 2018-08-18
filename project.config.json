@@ -1,0 +1,45 @@
+{
+	"description": "test wepy",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"appid": "touristappid",
+	"projectname": "your-peoject-name",
+	"miniprogramRoot": "./dist",
+	"libVersion": "2.0.2",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "entryfrom1043",
+					"pathName": "pages/index",
+					"query": "",
+					"scene": "1043",
+					"referrerInfo": {}
+				}
+			]
+		}
+	}
+}

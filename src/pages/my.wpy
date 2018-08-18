@@ -1,0 +1,48 @@
+<style lang="scss">
+@import '../styles/_globals.scss';
+.container {
+  padding-top: 14rpx;
+}
+.footer {
+  margin-top: 18rpx;
+  width: 100%;
+  text-align: center;
+  color: #999;
+  font-size: 26rpx;
+}
+</style>
+<template>
+  <view class="container">
+    <view>第二个测试页面{{testData}}</view>
+    <view class="footer">
+      <text>本服务由xxx提供</text>
+    </view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class My extends wepy.page {
+  config = {
+    navigationBarTitleText: '我的'
+  }
+  data = {
+    testData: '测试data'
+  }
+  methods = {}
+  showModal(text) {
+    wepy.showModal({
+      title: '提示',
+      showCancel: false,
+      content: text,
+      success: function(res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        }
+      }
+    })
+  }
+  onLoad() {}
+  onShow() {}
+}
+</script>

@@ -1,0 +1,171 @@
+/**
+ * 公共样式定义
+ * @module src/styles/common
+ * @author bigfact 2018.06.15
+ */
+
+@import './_globals';
+
+// 页面
+page {
+  background-color: #ebebeb;
+  color: $color-default;
+  font-size: 30rpx;
+  height: 100%;
+}
+
+// 页面容器
+.container {
+  // height: 100%;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-start;
+  // justify-content: space-between;
+  // box-sizing: border-box;
+}
+
+// 行组
+.row-group {
+  margin-bottom: 16rpx;
+}
+
+// 单行，带下边框
+.row {
+  border-bottom: 1rpx solid $color-light;
+  box-sizing: border-box;
+  padding: 34rpx 30rpx;
+  width: 100%;
+}
+
+// 字段行
+.row-field {
+  background-color: #ffffff;
+}
+.row-field-value {
+  float: right;
+  text-align: right;
+}
+
+// 下一步行
+.row-next {
+  padding: 30rpx 32rpx;
+}
+
+// 下拉列表行
+.row-select {
+  background: url(getImgUrl('icon/select.png')) no-repeat center right;
+  background-size: 30rpx auto;
+  padding-right: 48rpx;
+}
+
+// 上拉列表行
+.row-select-up {
+  background: url(getImgUrl('icon/select-up.png')) no-repeat center right;
+  background-size: 30rpx auto;
+  padding-right: 48rpx;
+}
+
+// 浮动
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+
+// 背景白色
+.bg-white {
+  background-color: #ffffff;
+}
+
+// 温馨提示
+.warm-hint {
+  color: $color-tertiary;
+  font-size: 24rpx;
+  > view {
+    &:first-of-type {
+      color: $color-secondary;
+      padding: 20rpx 0;
+    }
+  }
+}
+
+// 按钮
+// button 组件的 border 无法通过 border: none; 去掉
+.btn {
+  background-color: $color-primary;
+  border-radius: 44rpx;
+  border: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: 34rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  width: 100%;
+}
+
+// 居中
+.tac {
+  text-align: center;
+}
+.tal {
+  text-align: left;
+}
+.tar {
+  text-align: right;
+}
+
+// 字体颜色
+.color-default {
+  color: $color-default;
+}
+.color-secondary {
+  color: $color-secondary;
+}
+.color-tertiary {
+  color: $color-tertiary;
+}
+.color-link {
+  color: $color-link;
+}
+.color-primary {
+  color: $color-primary;
+}
+.color-placeholder {
+  color: $color-placeholder;
+}
+.color-active {
+  color: #23be60;
+}
+.color-orange {
+  color: #ff7015;
+}
+.color-important {
+  color: $color-important;
+}
+.color-white {
+  color: #ffffff;
+}
+
+// 字体大小
+// 12 号到 40 号字
+@for $i from 12 through 40 {
+  .fs#{$i} {
+    font-size: 2rpx * $i;
+  }
+}
+
+.clearfix {
+  zoom: 1;
+  &:after {
+    content: '';
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+  }
+}
+
+.no-border-bottom {
+  border-bottom: none;
+}

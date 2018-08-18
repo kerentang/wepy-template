@@ -1,0 +1,29 @@
+/**
+ * 全局 sass 配置
+* @module src/styles/common
+ * @author bigfact 2018.06.15
+ */
+
+// 主题色
+$color-primary: #ff6300;
+$color-default: #333333;
+$color-secondary: #666666;
+$color-tertiary: #999999;
+$color-placeholder: #cccccc;
+$color-light: #dbdbdb;
+$color-rice: #f6f3f3;
+$color-link: #4a90e2;
+$color-link-jf: #ff7015;
+$color-important: #ff6262;
+$color-danger: #ff0000;
+$color-success: #69c959;
+$color-warning: #ffb844;
+$color-bg-default: #f8f8f8;
+$color-border: #dddddd;
+
+/**
+ * @function px2rem
+ */
+@function px2rem($px) {
+  @return $px * 2rpx;
+}
